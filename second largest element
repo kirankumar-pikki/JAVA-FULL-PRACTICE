@@ -1,0 +1,21 @@
+second largest element
+using for each;
+class Solution {
+    public int getSecondLargest(int[] arr) {
+        // code here
+        int lar=-1;
+        int sec=-1;
+        for (int i:arr){
+            if(i>lar)
+            {
+                sec=lar;
+                lar=i;
+                
+            }
+            else if(i>sec && i!=lar){
+                sec=i;
+            }
+        }
+        return sec;
+    }
+}
