@@ -1,0 +1,136 @@
+arrray sum
+.............
+package dsa;
+import java.util.*;
+
+public class Switch {
+	public static void main(String[] args) {
+
+	int[] arr= {2,5,1};
+	int k=0;
+	
+	for(int i=0;i<arr.length;i++) {
+		k=k+arr[i];
+		
+	}
+	System.out.println(k);
+}
+}
+
+
+average of the array
+........................
+package dsa;
+import java.util.*;
+
+public class Switch {
+	public static void main(String[] args) {
+
+	int[] arr= {2,5,3,9,6};
+	int k=0;
+	
+	for(int i=0;i<arr.length;i++) {
+		k=k+arr[i];
+		
+	}
+	
+	System.out.println(k/arr.length);
+}
+}
+
+max value in a array with index
+.................................
+package dsa;
+import java.util.*;
+
+public class Switch {
+	public static void main(String[] args) {
+		int[] arr= {2,5,1,9,6};
+		int largest=0;
+		int index=0;
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]>largest) {
+				largest=arr[i];
+				index=i;
+			}
+			
+			
+		}
+		
+		System.out.println(largest);
+		System.out.println(index);
+		
+	}
+}
+
+merging two arrays
+..................
+package dsa;
+import java.util.*;
+
+public class Switch {
+	public static void main(String[] args) {
+		String[] arr= {"chai","cofee"};
+		String[] arr1= {"milk","waterr","coke"};
+		String[] arr3=new String[arr.length+arr1.length];
+		
+		int index=0;
+		
+		for (int i=0;i<arr.length;i++) {
+			arr3[index]=arr[i];
+			index++;
+		}
+		System.out.println(index);
+		
+		for(int i=0;i<arr1.length;i++) {
+			arr3[index]=arr1[i];
+			index++;
+		}
+		for (int i=0;i<arr3.length;i++) {
+			System.out.print(arr3[i]);
+		}
+	}
+}
+
+minlen word in array
+.........................
+package dsa;
+import java.util.*;
+
+public class Switch {
+	public static void main(String[] args) {
+		String[] name={"coffee","water","chai","diet coke"};
+		int minlength=name[0].length();
+		String minlenword=name[0];
+		int value=0;
+		for(int i=0;i<name.length;i++) {
+			int size=name[i].length();
+			if (size<minlength) {
+				minlenword=name[i];
+				value=i;
+			}
+		}
+		System.out.println(minlenword);
+		System.out.println(value);
+		
+	}
+}
+
+reverse array
+...............
+package dsa;
+import java.util.*;
+
+public class Switch {
+	public static void main(String[] args) {
+		boolean[] arr= {true,false,false,true,false,true};
+		boolean[] arr1=new boolean[arr.length];
+		int k=0;
+		for(int i=arr.length-1;i>=0;i--) {
+			arr1[k]=arr[i];
+			k++;
+		}
+		for(int i=0;i<arr1.length;i++) {
+		System.out.print(arr1[i]+" ");
+		}
+	}
