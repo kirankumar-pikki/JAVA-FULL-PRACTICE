@@ -1,0 +1,214 @@
+string is a class not like integer  (we can check in eclipse)
+in normal we canot assign value to the class
+but in string (even thought it a class)we can assign value to  it
+
+if ram is class (ram s1="kummar");//wrong
+but 
+string is class(string s1="kumar")//correct
+(it is literal)due to this behaviour
+.......................................
+
+since it string is a class we have sevarral methods
+comcat
+upercase
+loweercase
+start with
+end with
+equal
+equlaignorecase
+.
+.
+.
+.
+.
+
+string pooll equal 
+...................
+package dsa;
+import java.util.*;
+
+public class Switch {
+	public static void main(String[] args) {
+		String s1="hello";
+		String s2="hello";
+		System.out.println(s1==s2);
+		String s3=new String(s1);
+		System.out.println(s1==s3);
+		
+	}
+}
+
+
+
+string methods all in one
+............................
+package dsa;
+import java.util.*;
+
+public class Switch {
+	public static void main(String[] args) {
+		String s1="hellllo";
+		String s2="Hello";
+		String s4="Hell^o t^his is kumar";
+		System.out.println("=="     +s1==s2);
+		String s3=new String(s1);
+		System.out.println("== object    "+s1==s3);
+		System.out.println("equal    "+s1.equals(s2));
+		System.out.println("equalIgnorecase    "+s1.equalsIgnoreCase(s2));
+		System.out.println("contains    "+s1.contains("l"));
+		System.out.println("starts with    "+s1.startsWith("h"));
+		System.out.println("ends with    "+s1.endsWith("o"));
+		System.out.println("lenggth      "+s1.length());
+		System.out.println("trim   removes white spaces      ."+s1.trim());
+		System.out.println("lower case      "+s1.toLowerCase());
+		System.out.println("upper case      "+s1.toUpperCase());
+		char[] charArray = s1.toCharArray();
+		System.out.println("to char array    "+charArray);
+		for (char c : charArray) {
+			System.out.print(c+",");
+			
+		}
+		System.out.println();
+		System.out.println("index    "+s1.indexOf("l"));
+		System.out.println("last indexoff     "+s1.lastIndexOf("l"));
+		System.out.println("substriing    "+s1.substring(2));
+		System.out.println("substriing    "+s1.substring(2,3));
+		System.out.println(Arrays.toString(s4.split(" ")));
+		System.out.println(Arrays.toString(s4.split("\\^")));
+		System.out.println(s1.charAt(2));
+		System.out.println(s1.replace("l", "L"));
+		System.out.println(s4.replaceAll("is", "IS"));
+		String s5="234";
+		int i=Integer.valueOf(s5);
+		System.out.println(i);
+		String s6="kumar";
+		String m=String.valueOf(s6);
+		System.out.println(s6);
+		
+		String a1;
+		String a2="";
+		String a3="  ";
+		String a4="k";
+		
+		System.out.println(a2.isBlank());
+		System.out.println(a2.isEmpty());
+		System.out.println(a3.isBlank());
+		System.out.println(a3.isEmpty());
+		System.out.println(a4.isBlank());
+		System.out.println(a4.isEmpty());
+		
+		
+		
+	}
+}
+
+NO OF LETTERS IN A STRING
+.........................
+package dsa;
+import java.util.*;
+
+public class Switch {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.nextLine()	;
+		System.out.println(s1.length());
+	}
+}
+
+
+no of words in a string
+........................
+package dsa;
+import java.util.*;
+
+public class Switch {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.nextLine();
+		int count=0;
+		String[] arr=s1.split(" ");
+		for (String string : arr) {
+			count++;
+		}
+		System.out.println(count);
+	}
+}
+
+
+no of times that a word occured
+...................................
+package dsa;
+import java.util.*;
+
+public class Switch {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.nextLine();
+		int count=0;
+		char[] arr=s1.toCharArray();	
+		for (char c : arr) {
+			if(c=='l') {
+				count++;
+				
+			}
+			
+		}
+		System.out.println(count);
+	}
+}
+
+reversing a srring 
+....................
+package dsa;
+import java.util.*;
+
+public class Switch {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		String sc=s.nextLine();
+		String s1="";
+		for(int i=sc.length()-1;i>=0;i--) {
+			s1=s1+sc.charAt(i);
+		}
+		System.out.println(s1);
+		
+		}
+	}
+
+  removing white spaces
+  ..........................
+  package dsa;
+import java.util.*;
+
+public class Switch {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		System.out.println(s.trim());
+		
+	}
+}
+
+
+word rev
+............
+package dsa;
+import java.util.*;
+
+public class Switch {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		String[] wr=s.split(" ");
+		String rev="";
+		for (String string : wr) {
+			for(int i=string.length()-1;i>=0;i--) {
+				rev=rev+string.charAt(i);
+				
+			}
+			
+		}
+		System.out.println(rev);
+		
+	}
+} 
