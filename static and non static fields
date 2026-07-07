@@ -1,0 +1,38 @@
+Static means memory allocation
+
+basically in java to allocate memory we use object by creating we can allocate memory
+static is also used for alocating memory but i can be doe only once
+
+package dsa;
+import java.util.*;
+
+import com.hyr.strings.Test;
+
+public class Switch {
+	static int number;
+	int non;
+	
+	public static void test1() {
+		System.out.println("static method");
+	}
+	public void test2() {
+		System.out.println("non static method");
+	}
+	
+	static {
+		System.out.println("static block");
+	}
+	{
+		System.out.println("non static block");
+	}
+	public static void main(String[] args) {
+		System.out.println(number=10);
+		Switch t1=new Switch();
+		System.out.println(t1.non=20);
+		Switch.test1();
+		t1.test2();
+}
+}
+
+
+
