@@ -1,0 +1,158 @@
+code for the inheritance multilevel
+.....................................
+
+code 1
+\\\\\\\\\\\
+package ooops;
+
+public class Guest {
+	public void read() {
+		System.out.println("read done");
+	}
+
+}
+code2
+\\\\\\\\\
+package ooops;
+
+public class User extends Guest {
+	public void write() {
+		System.out.println("write");
+	}
+
+
+}
+code 3
+////////////////
+package ooops;
+
+public class Adminstrator extends User{
+	public void update() {
+		System.out.println("update");
+	}
+
+
+}
+code 4
+////////////
+package ooops;
+
+
+
+public class Accesss {
+
+	public static void main(String[] args) {
+		
+		Guest guest=new Guest();
+		guest.read();
+		
+		User user=new User();
+		user.read();
+		user.write();
+		
+		Adminstrator admin=new  Adminstrator();
+		admin.read();
+		admin.write();
+		admin.update();
+		
+
+	}
+}
+
+inheritance in multiple for  this we want interrface
+iinsted of class we can create interface ----class ram{}------>interface ram{}
+/////////////////////////////////////////////////
+interfae 1
+package ooops;
+
+public interface Iguest {
+	void sysout();
+
+}
+interface 2
+///////////////
+package ooops;
+
+public interface Iuser {
+
+}
+
+package ooops;
+
+public interface Iadminstrator extends Iguest,Iuser {///////////////////////here we can have clear understand
+
+
+}
+
+//////////////////////////////////////////////
+
+
+
+
+
+
+interface only methods name no code 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+super keyword
+/////////////
+..............
+basically in java when you call a method 1st java will points to the local one 
+if we want to use the out the local one i.e in super class
+so we prefer the super keyword
+
+super.method name();
+
+
+
+
+code 1
+..........
+package ooops;
+
+public class Guest {
+	public void read() {
+		System.out.println("read by guest");
+	}
+
+}
+
+
+
+
+code2
+..............
+package ooops;
+
+public class User extends Guest {
+	public void write() {
+		read();
+		super.read();
+		System.out.println("write by user");
+	}
+	public  void read() {
+		System.out.println("read by user");
+	}
+
+public static void main(String[] args) {
+	User u=new User();
+	u.write();
+}
+}
+
+output................
+read by user
+read by guest
+write by user
