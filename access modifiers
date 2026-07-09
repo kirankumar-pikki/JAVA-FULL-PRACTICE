@@ -1,0 +1,23 @@
+this are the which deffines the restrictions to the code
+i.e the place where the method should be used and variable shoulld be used 
+
+they are 4 acess modifiers               keywords                       variable                        methods             
+***public                                public                         public int munber=10;           public void print();
+***protected                             protected                      protected int munber=10;        protected void print();
+***no modifier(default)                  no word--->int num=10          int munber=10;                  void print();
+***privatte                              private                        private int munber=10;          private void print();
+
+
+.....................................accessibility...............................................
+
+modifier                          with  in the class                with in the package                 subclass(iinherritance)          project oout(another project)
+public                            yes                                  yes                              yes                                yes
+protected                         yes                                 yes                               yes                               noo
+no  modifier                     yes                                  yes                               no                                 no
+private                            yes                               no                                no                                   no
+
+
+with inn the class-------------------INSIDE THE SAME CLASS
+with in the packag-------------------in another class i.e innt the same package
+subclass-----------------------------inheritance 
+project------------------------------in thhe another projecte
