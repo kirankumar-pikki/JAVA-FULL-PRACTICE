@@ -1,0 +1,53 @@
+wrapping up data into one capsule
+which hides data working from rea1 world
+int he below example you can observe ispresent--->is now used not directly accesed
+we did by the giving methods we call them by in the methods
+wecan call those methods only we caant handel the real value due to private
+
+
+
+code1
+//////////
+package dsa;
+
+
+
+public class Access1{
+
+	private boolean ispresent;
+
+
+	
+	public void setispresent(boolean flag) {
+		this.ispresent=flag;
+		System.out.println("student is present");
+	}
+	
+	
+	
+	public void getispresent() {
+		System.out.println(ispresent);
+	}
+	
+	
+		
+		
+	
+	}
+
+code2.
+.......................
+package dsa;
+
+public class teacher {
+
+	public static void main(String[] args) {
+		Access1 s=new Access1();
+		s.setispresent(true);
+		s.getispresent();
+
+    }
+    }
+
+	}
+}
