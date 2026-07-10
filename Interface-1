@@ -1,0 +1,71 @@
+it is the blue print of the class
+
+code 1
+///////////////
+package dsa;
+
+
+public interface Iface {
+	
+	public void read();
+	
+	public void write();
+	
+	public void drink();
+	
+	default void eat() {
+		System.out.println("interface phase and eat");
+	}
+	
+	static void sleep() {
+		System.out.println("ststic in sleep ");
+	}
+
+}
+code2
+//////////
+package dsa;
+
+public class Mss implements Iface {
+
+	@Override
+	public void read() {
+		System.out.println("read");
+		
+	}
+
+	@Override
+	public void write() {
+		System.out.println("write");
+		
+	}
+
+	@Override
+	public void drink() {
+		System.out.println("drink");
+		
+	}
+	@Override
+	public void eat() {
+		System.out.println("eating in mss phase");
+		
+	}
+	
+	}
+}
+code3
+//////////
+package dsa;
+
+
+public class Acc extends Mss {
+	public static void main(String[] args) {
+		Acc m=new Acc();
+		m.read();
+		m.write();
+		m.drink();
+		m.eat();
+		Iface.sleep();
+	}
+
+}
