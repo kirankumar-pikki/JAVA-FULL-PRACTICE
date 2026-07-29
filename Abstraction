@@ -1,0 +1,52 @@
+abstraction...............
+
+hiding orginal data from the user...
+
+package kumarjava;
+
+public interface Inf {
+	public void task1();
+	public void task2();
+	public void task3();
+	
+
+}
+//////////////////////////////
+..............................
+
+package kumarjava;
+
+public  class  Abscls implements Inf {
+	
+	public void task1() {
+		System.out.println("this is task 1");
+	}
+	public void task2() {
+		System.out.println("this is task 2");
+	}
+	public void task3() {
+		System.out.println("this is task 3");
+		
+	}
+	
+}
+
+
+////////////////////////////////////
+.....................................
+
+package kumarjava;
+import java.util.*;
+
+public class Nabs {
+	public static void main(String[] args) {
+		Inf obj=new Abscls();
+		obj.task1();
+		obj.task2();
+		
+		
+
+	}
+
+}
+
